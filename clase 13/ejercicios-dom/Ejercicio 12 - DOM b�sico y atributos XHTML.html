@@ -12,7 +12,13 @@
       }
     </style>
     <script type="text/javascript">
-      function muestra() {}
+      function muestra() {
+          let textoAdicional = document.getElementById('adicional');
+          textoAdicional.className = "visible";
+
+          let enlace = document.getElementById('enlace');
+          enlace.className = "oculto";
+      }
     </script>
   </head>
   <body>
@@ -36,7 +42,7 @@
     <a
       id="enlace"
       href="#"
-      onclick="if (!window.__cfRLUnblockHandlers) return false; muestra(); return false;"
+      onclick="muestra(); return false;"
       >Seguir leyendo</a
     >
   </body>
