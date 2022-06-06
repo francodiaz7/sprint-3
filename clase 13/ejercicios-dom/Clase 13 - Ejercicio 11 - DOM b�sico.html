@@ -7,13 +7,63 @@
       window.onload = function () {
         // Numero de enlaces de la pagina
         const ejercicio1 = document.createElement("p");
+
         document.body.appendChild(ejercicio1);
+
         const enlaces = document.getElementsByTagName("a");
+
         ejercicio1.textContent =
           "Número de enlaces de la página: " + enlaces.length;
         // Direccion del penultimo enlace
-        // Numero de enlaces que apuntan a http://prueba
+        const ejercicio2 = document.createElement("p");
+        document.body.appendChild(ejercicio2);
+        const enlacePenultimo = enlaces[enlaces.length - 2];
+        ejercicio2.textContent = "Dirección del enlace: " + enlacePenultimo;
+        // Numero de enlaces que apuntan a prueba
+        // const ejercicio3 = document.createElement("p");
+
+        // let contador = 0;
+        // for (let i = 0; i < enlaces.length; i++) {
+        //   const element = enlaces[i];
+        //   if (
+        //     element.href == "http://prueba:" ||
+        //     element.href == "http://prueba:/"
+        //   ) {
+        //     contador++;
+        //   }
+        //   console.log(contador);
+        // }
+        // ejercicio3.textContent =
+        //   "Numero de enlaces que apuntan a http://prueba: " + contador;
+        // document.body.appendChild(ejercicio3);
+        const ejercicio3 = document.createElement("p");
+        let j = 0;
+
+        document.body.appendChild(ejercicio3);
+
+        for (let i = 0; i < enlaces.length; i++) {
+          const element = enlaces[i];
+
+          if (
+            element.href == "http://prueba" ||
+            element.href == "http://prueba/"
+          ) {
+            j++;
+          }
+        }
+
+        ejercicio3.textContent = "Numero de enlaces que apuntan a prueba: " + j;
+
         // Numero de enlaces del tercer p�rrafo
+        const ejercicio4 = document.createElement("p");
+        document.body.appendChild(ejercicio4);
+
+        const parrafos = document.getElementsByTagName("p");
+
+        const etiquetas = parrafos[2].getElementsByTagName("a");
+
+        ejercicio4.textContent =
+          "Numero de enlaces del tercer párrafo: " + etiquetas.length;
       };
     </script>
   </head>
