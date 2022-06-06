@@ -5,21 +5,21 @@
     <title>Ejercicio 11 - DOM b�sico</title>
     <script type="text/javascript">
       window.onload = function () {
-        // Numero de enlaces de la pagina
+        // EJERCICIO 1 - Numero de enlaces de la pagina
         const ejercicio1 = document.createElement("p");
-
         document.body.appendChild(ejercicio1);
-
         const enlaces = document.getElementsByTagName("a");
 
         ejercicio1.textContent =
           "Número de enlaces de la página: " + enlaces.length;
-        // Direccion del penultimo enlace
+        // EJERCICIO 2 - Direccion del penultimo enlace
         const ejercicio2 = document.createElement("p");
         document.body.appendChild(ejercicio2);
+        
         const enlacePenultimo = enlaces[enlaces.length - 2];
-        ejercicio2.textContent = "Dirección del enlace: " + enlacePenultimo;
-        // Numero de enlaces que apuntan a prueba
+
+        ejercicio2.textContent = "Dirección del penultimo enlace: " + enlacePenultimo;
+        //  EJERCICIO 3 - Numero de enlaces que apuntan a prueba
         const ejercicio3 = document.createElement("p");
         let c = 0;
 
@@ -36,26 +36,8 @@
           }
         }
         ejercicio3.textContent = "Numero de enlaces que apuntan a prueba: " + c;
-        // Ejercicio resuelto en clase.
-        const ejercicio3b = document.createElement("p");
-        let j = 0;
 
-        document.body.appendChild(ejercicio3b);
-
-        for (let i = 0; i < enlaces.length; i++) {
-          const element = enlaces[i];
-
-          if (
-            element.href == "http://prueba" ||
-            element.href == "http://prueba/"
-          ) {
-            j++;
-          }
-        }
-
-        ejercicio3b.textContent = "Numero de enlaces que apuntan a prueba: " + j;
-
-        // Numero de enlaces del tercer p�rrafo
+        // EJERCICIO 4 - Numero de enlaces del tercer parrafo
         const ejercicio4 = document.createElement("p");
         document.body.appendChild(ejercicio4);
 
