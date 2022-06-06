@@ -6,8 +6,11 @@
     <script type="text/javascript">
       window.onload = function () {
         // Numero de enlaces de la pagina
-		let numero = document.getElementsByTagName('a');
-		console.log('numero');
+        const ejercicio1 = document.createElement("p");
+        document.body.appendChild(ejercicio1);
+        const enlaces = document.getElementsByTagName("a");
+        ejercicio1.textContent =
+          "Número de enlaces de la página: " + enlaces.length;
         // Direccion del penultimo enlace
         // Numero de enlaces que apuntan a http://prueba
         // Numero de enlaces del tercer p�rrafo
