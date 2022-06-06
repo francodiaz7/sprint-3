@@ -20,26 +20,27 @@
         const enlacePenultimo = enlaces[enlaces.length - 2];
         ejercicio2.textContent = "Dirección del enlace: " + enlacePenultimo;
         // Numero de enlaces que apuntan a prueba
-        // const ejercicio3 = document.createElement("p");
-
-        // let contador = 0;
-        // for (let i = 0; i < enlaces.length; i++) {
-        //   const element = enlaces[i];
-        //   if (
-        //     element.href == "http://prueba:" ||
-        //     element.href == "http://prueba:/"
-        //   ) {
-        //     contador++;
-        //   }
-        //   console.log(contador);
-        // }
-        // ejercicio3.textContent =
-        //   "Numero de enlaces que apuntan a http://prueba: " + contador;
-        // document.body.appendChild(ejercicio3);
         const ejercicio3 = document.createElement("p");
-        let j = 0;
+        let c = 0;
 
         document.body.appendChild(ejercicio3);
+
+        for (let i = 0; i < enlaces.length; i++) {
+          const element = enlaces[i];
+
+          if (
+            element.href == "http://prueba" ||
+            element.href == "http://prueba/"
+          ) {
+            c++;
+          }
+        }
+        ejercicio3.textContent = "Numero de enlaces que apuntan a prueba: " + c;
+        // Ejercicio resuelto en clase.
+        const ejercicio3b = document.createElement("p");
+        let j = 0;
+
+        document.body.appendChild(ejercicio3b);
 
         for (let i = 0; i < enlaces.length; i++) {
           const element = enlaces[i];
@@ -52,7 +53,7 @@
           }
         }
 
-        ejercicio3.textContent = "Numero de enlaces que apuntan a prueba: " + j;
+        ejercicio3b.textContent = "Numero de enlaces que apuntan a prueba: " + j;
 
         // Numero de enlaces del tercer p�rrafo
         const ejercicio4 = document.createElement("p");
